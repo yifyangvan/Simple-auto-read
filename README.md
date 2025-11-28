@@ -1,87 +1,98 @@
 # Simple Auto Read
 
-简化版自动阅读脚本，支持多个网站的自动阅读和点赞功能。
-
+A Tampermonkey script for automatic post reading on specific forum websites.
 
 <img width="323" height="390" alt="image" src="https://github.com/user-attachments/assets/fd03b82c-6835-48c1-ae11-2fe4e033a822" />
 
+## Features
 
-## 功能特性
+- **Automatic Scrolling**: Automatically scroll through forum posts at adjustable speeds
+- **Auto Like**: Automatically like posts with configurable intervals
+- **Read History**: Avoids re-reading the same posts by maintaining a reading history
+- **Site Support**: Compatible with multiple forum websites:
+  - https://www.nodeloc.com
+  - https://linux.do
+  - https://mjjbox.com (in some versions)
+- **Configurable Settings**: Customize scroll speed, like intervals, and more
+- **User-Friendly Panel**: Easy-to-use control panel for managing script functions
+- **Daily Counter**: Tracks daily activity with automatic reset
 
-- 📚 **自动阅读**：自动滚动页面，阅读完当前文章后自动跳转到下一篇
-- 👍 **智能点赞**：自动为文章点赞，支持自定义点赞速度和每日上限
-- ⚙️ **灵活配置**：可调整滚动速率和点赞速度
-- 📊 **实时监控**：显示当前阅读状态和今日点赞进度
-- 🎨 **简洁UI**：美观的控制面板，支持最小化和恢复
-- 🔒 **站点独立**：不同网站的配置独立存储，互不影响
-- 📱 **真实模拟**：模拟真实用户的滚动和鼠标移动行为
-  
-## 觉得好用点点star
-## 支持网站
+## Installation
 
-## 安装说明
+1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension
+2. Create a new script in Tampermonkey
+3. Copy the content of one of the script files (`read.js`, `simple-read.js`, or `simple-read1.js`)
+4. Paste the content into the Tampermonkey script editor
+5. Save the script
+6. Navigate to one of the supported forum websites
 
-1. 确保你的浏览器已安装 [Tampermonkey](https://www.tampermonkey.net/) 扩展或者[脚本猫](https://scriptcat.org/)
-2. 点击浏览器工具栏中的 Tampermonkey 图标
-3. 选择「添加新脚本」
-4. 将 `read.js` 文件的内容复制粘贴到编辑器中
-5. 点击「文件」→「保存」或使用快捷键 `Ctrl+S`
-6. 脚本将自动启用
+## Usage
 
-## 使用方法
+1. The control panel will appear in the bottom right corner of the page
+2. Click the "Start" button to begin automatic reading
+3. Adjust the scroll speed using the provided slider
+4. Toggle auto-like functionality as needed
+5. Configure the like interval for auto-like feature
 
-1. 访问支持的网站
-2. 页面右下角会出现「自动阅读控制」面板
-3. 点击「开始阅读」按钮启动自动阅读
-4. 点击「停止阅读」按钮停止自动阅读
-5. 可选择启用/禁用自动点赞功能
-6. 通过滑块调整滚动速率和点赞速度
-7. 点击最小化按钮可将面板最小化，再次点击可恢复
+## Script Variants
 
-## 配置选项
+- **read.js**: Full-featured version with comprehensive controls
+- **simple-read.js**: Simplified version supporting nodeloc.com, linux.do, and mjjbox.com
+- **simple-read1.js**: Simplified version supporting only nodeloc.com and linux.do
 
-### 滚动速率
-- **范围**：1 - 200
-- **默认值**：40
-- **说明**：控制页面滚动的速度，数值越大滚动越快
+## Configuration Options
 
-### 点赞速度
-- **范围**：1秒 - 10分钟
-- **默认值**：2.5秒
-- **说明**：控制自动点赞的间隔时间，数值越大点赞越慢
+### Scroll Speed
+- **Range**: 1 - 200
+- **Default**: 40
+- **Description**: Controls how fast the page scrolls, higher values mean faster scrolling
 
-## 控制面板说明
+### Like Interval
+- **Range**: 1000 - 600000ms (1 second - 10 minutes)
+- **Default**: 2500ms (2.5 seconds)
+- **Description**: Controls the time between automatic likes, higher values mean slower liking
 
-### 按钮功能
-- **开始阅读**：启动自动阅读功能
-- **停止阅读**：停止自动阅读功能
-- **启用自动点赞**：开启自动点赞功能
-- **禁用自动点赞**：关闭自动点赞功能
-- **最小化按钮**：将控制面板最小化
+### Read History
+- **Capacity**: Up to 100 posts
+- **Description**: Automatically manages previously read posts to avoid re-reading
 
-### 状态显示
-- **滚动速率**：显示当前设置的滚动速度
-- **点赞速度**：显示当前设置的点赞间隔时间
-- **今日点赞**：显示今日已点赞数量和上限
-- **状态信息**：显示当前脚本运行状态
+### Daily Reset
+- **Interval**: 24 hours
+- **Description**: Activity counter resets automatically every day
 
-### 最小化状态
-- 显示当前阅读状态（阅读中/已停止）
-- 点击最小化面板可恢复完整控制面板
+## Control Panel
 
-## 注意事项
+### Buttons
+- **Start Reading**: Begin automatic reading
+- **Stop Reading**: Pause automatic reading
+- **Enable Auto Like**: Activate automatic liking
+- **Disable Auto Like**: Deactivate automatic liking
+- **Minimize Button**: Collapse the control panel
 
-1. 本脚本仅用于学习和测试目的，请遵守各网站的使用规则
-2. 建议合理设置点赞速度，避免对网站造成不必要的负担
-3. 脚本默认每日点赞上限为50次，超过上限将自动停止点赞
-4. 脚本会记录已读文章，避免重复阅读
-5. 如遇到问题，可尝试刷新页面或重启浏览器
-6. 脚本使用 MIT 许可证，可自由修改和分发
+### Status Display
+- **Scroll Speed**: Shows current scroll speed setting
+- **Like Interval**: Shows current like interval setting
+- **Today's Likes**: Displays daily like count and limit
+- **Status Info**: Shows current script running status
 
-## 许可证
+### Minimized State
+- Shows current reading status (Active/Inactive)
+- Click to restore the full control panel
+
+## Permissions
+
+The script requires the following Tampermonkey permissions:
+- `GM_addStyle`: For adding custom styles
+- `GM_getValue`: For storing settings
+- `GM_setValue`: For retrieving settings
+- `GM_registerMenuCommand`: For adding menu commands
+- `GM_notification`: For displaying notifications (in some versions)
+
+## Changelog
+
+### v1.0.0
+
+## License
 
 MIT License
 
----
-
-**免责声明**：本脚本仅供学习和研究使用，使用本脚本产生的一切后果由使用者自行承担。
