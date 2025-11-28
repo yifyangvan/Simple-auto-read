@@ -19,7 +19,7 @@ A Tampermonkey script for automatic post reading on specific forum websites.
 
 ## Installation
 
-1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension
+1. Install the [Tampermonkey](https://www.tampermonkey.net/) [脚本猫](https://scriptcat.org/)browser extension
 2. Create a new script in Tampermonkey
 3. Copy the content of one of the script files (`read.js`, `simple-read.js`, or `simple-read1.js`)
 4. Paste the content into the Tampermonkey script editor
