@@ -12,7 +12,6 @@ A Tampermonkey script for automatic post reading on specific forum websites.
 - **Site Support**: Compatible with multiple forum websites:
   - https://www.nodeloc.com
   - https://linux.do
-  - https://mjjbox.com (in some versions)
 - **Configurable Settings**: Customize scroll speed, like intervals, and more
 - **User-Friendly Panel**: Easy-to-use control panel for managing script functions
 - **Daily Counter**: Tracks daily activity with automatic reset
