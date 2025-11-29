@@ -12,7 +12,7 @@ struct ForecastViewModel {
 
   init(_ forecast: Forecast) {
     time = Observable(forecast.time)
-    iconText = Observable(forecast.iconText)
+    iconText = Observable(forecast.iconTexts)
     temperature = Observable(forecast.temperature)
   }
 }
